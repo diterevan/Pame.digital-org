@@ -1,0 +1,82 @@
+clamp()
+  -webkit-box-orient vertical
+  overflow hidden
+  display -webkit-box
+
+clamp1()
+  clamp()
+  -webkit-line-clamp 1
+
+clamp2()
+  clamp()
+  -webkit-line-clamp 2
+
+clamp3()
+  clamp()
+  -webkit-line-clamp 3
+
+
+h1, h2, h3
+  color gray
+  font-size 32px
+  font-weight 400
+  letter-spacing -.01em
+  b
+    font-weight 600
+
+
+h1
+  line-height 1.2
+
+  @media mobile
+    font-size 34px
+
+  @media tablet-s
+    font-size 50px
+
+  @media tablet
+    font-size 56px
+
+  @media (min-width ds-point)
+    font-size 6.3vw
+
+  @media (min-width d-point)
+    font-size 78px
+
+  @media (min-width dl-point)
+    font-size 5.1vw
+
+
+h2
+  line-height 1.25
+
+
+h3
+  line-height 1.1
+
+  @media (min-width m-point)
+    font-size 34px
+
+  @media (min-width ts-point)
+    font-size 48px
+
+  @media (min-width t-point)
+    font-size 55px
+
+  @media (min-width d-point)
+    font-size 60px
+
+
+
+.title
+  color gray
+  font-size 24px
+  font-weight 600
+  line-height 1.3
+  display block
+
+.text
+  font-family 'Inter', sans-serif
+  color gray
+  font-size 14px
+  line-height 1.5

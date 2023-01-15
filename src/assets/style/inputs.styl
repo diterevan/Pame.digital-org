@@ -1,0 +1,43 @@
+.input
+  font-family 'Inter', sans-serif
+  color gray
+  border-radius 100px
+  transition margin-right .25s ease
+
+  font-size 16px
+  height 49.4px
+  padding 0 20px
+
+  @media (min-width ts-point)
+    font-size 22px
+    height 60.59px
+
+  @media (min-width t-point)
+    height 63.2px
+    padding 0 25px
+
+  @media (min-width ds-point)
+    height 67.2px
+    padding 0 30px
+
+  @media (min-width dl-point)
+    height 73.19px
+
+  @media (min-width t-point)
+    &:focus
+      margin-right 10px
+
+
+.action
+  display inline-flex
+  background white
+  border-radius 100px
+  input
+    width 100%
+    max-width 230px
+
+    @media (min-width t-point)
+      max-width 250px
+
+    @media (min-width ds-point)
+      max-width 265px
