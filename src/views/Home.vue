@@ -29,16 +29,16 @@
     <img src="https://basho-color.fueko.net/content/images/2022/01/basho.svg">
   </header>
 
-  <main>
+  <main class="main">
     <h1>
       <!-- <b>Pame Digital.</b>
       Consejos de Inversión, Marketing y Desarrollo Personal. -->
     </h1>
 
-    <form>
-      <input placeholder="Escríbe a whatsapp">
-      <button>Contáctame</button>
-    </form>
+    <div class="action">
+      <input class="input" placeholder="Escríbe a whatsapp">
+      <button class="button">Contáctame</button>
+    </div>
 
   </main>
 
