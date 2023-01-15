@@ -26,7 +26,7 @@
 <template>
 
   <header class="header">
-    <img src="https://basho-color.fueko.net/content/images/2022/01/basho.svg">
+    <img src="@/assets/img/logo.svg">
   </header>
 
   <main class="main">
