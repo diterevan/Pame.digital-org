@@ -22,6 +22,26 @@
     })
     .catch(err => console.log(err))
 
+
+  const phone = '51936320564'
+  const msg_0 = 'Hola Pame Digital'
+  let   msg   = ref('')
+
+
+  const click = () => {
+
+    console.log('click ', msg.value)
+
+    if(!msg.value) msg.value = msg_0
+
+    const code = encodeURIComponent(msg.value)
+    console.log(code)
+
+    const url = `https://wa.me/${phone}?text=${code}`
+
+    window.open(url)
+  }
+
 </script>
 
 <template>
@@ -34,8 +54,8 @@
     <h1 v-html="text"></h1>
 
     <div class="action">
-      <input class="input" placeholder="Escríbe a whatsapp">
-      <button class="button">Contáctame</button>
+      <input class="input" v-model="msg" placeholder="Escríbe a whatsapp">
+      <button class="button" @click="click">Contáctame</button>
     </div>
 
   </main>

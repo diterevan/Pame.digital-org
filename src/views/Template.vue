@@ -18,7 +18,6 @@
       <input class="input" placeholder="Your email address">
       <button class="button">Subscribe</button>
     </div>
-
   </main>
 
   <section>
