@@ -22,11 +22,19 @@
   </main>
 
   <section>
-    <h2>See what we’ve <b>written lately</b></h2>
+    <h2>
+      See what we’ve <br>
+      <b>written lately</b>
+    </h2>
 
-    <Article />
-    <Article />
-    <Article />
+    <div class="articles">
+      <Article />
+      <Article />
+      <Article />
+      <Article />
+      <Article />
+      <Article />
+    </div>
 
   </section> <br>
 
