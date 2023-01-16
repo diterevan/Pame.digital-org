@@ -1,4 +1,5 @@
 <script setup>
+  import { ref, onMounted } from 'vue'
 
   import * as contentful from 'contentful'
   import { documentToHtmlString } from '@contentful/rich-text-html-renderer'
@@ -8,16 +9,16 @@
     accessToken: "2LQnxlORVCt2TCU-jOVNq8KSPGNQzZTFWBfT3dxFets",
   })
 
+  const text = ref('')
+
   client
     .getEntry("7JOjQLs9XhN1HA1XUUJVWz")
     .then((entry) => {
-      // console.log({ entry })
       const rawRichTextField = entry.fields.title
       return documentToHtmlString(rawRichTextField)
     })
     .then((renderedHtml) => {
-      // console.log(renderedHtml)
-      document.getElementsByTagName('h1')[0].innerHTML = renderedHtml
+      text.value = renderedHtml
     })
     .catch(err => console.log(err))
 
@@ -30,10 +31,7 @@
   </header>
 
   <main class="main">
-    <h1>
-      <!-- <b>Pame Digital.</b>
-      Consejos de Inversión, Marketing y Desarrollo Personal. -->
-    </h1>
+    <h1 v-html="text"></h1>
 
     <div class="action">
       <input class="input" placeholder="Escríbe a whatsapp">
